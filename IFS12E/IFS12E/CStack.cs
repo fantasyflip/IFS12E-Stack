@@ -10,12 +10,13 @@ namespace IFS12E
     {
         private int i_size;
         private int[] ia_Stack;
-        private int i_aktIndex;
+        private int i_aktIndex = 0;
 
         //Konstruktor
         public CStack(int i_newSize)
         {
-
+            setSize(i_newSize);
+            ia_Stack = new int[i_newSize];
         }
 
         public void setSize(int i_newSize)
@@ -70,11 +71,24 @@ namespace IFS12E
 
         public int Pop()
         {
-            int i_ergebnis;
-            i_ergebnis = this.ia_Stack[getAktIndex()];
-            LowerIndexByOne();
-            return i_ergebnis;
+            //int i_ergebnis;
+            if(!isEmpty())
+            {
+                LowerIndexByOne();
+                return this.ia_Stack[getAktIndex()];
+            }
+            return 0;
+        }
 
+        public bool isEmpty()
+        {
+            bool b_ergebnis = true;
+
+            if (getAktIndex() > 0)
+            {
+                b_ergebnis = false;
+            }
+            return b_ergebnis;
         }
     }
 }

@@ -10,7 +10,7 @@
         <Label x:Name="lblUseStack" Content="Stack benutzen" HorizontalAlignment="Left" Margin="43,51,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <TextBox x:Name="txtStackInput" HorizontalAlignment="Left" Height="23" Margin="32,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnPush" Content="Push" HorizontalAlignment="Left" Margin="43,128,0,0" VerticalAlignment="Top" Width="96" Click="btnPush_Click"/>
-        <Button x:Name="btnPop" Content="Pop" HorizontalAlignment="Left" Margin="43,169,0,0" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="btnPop" Content="Pop" HorizontalAlignment="Left" Margin="43,169,0,0" VerticalAlignment="Top" Width="96" Click="btnPop_Click"/>
         <Button x:Name="btnExit" Content="Ende" HorizontalAlignment="Left" Margin="43,232,0,0" VerticalAlignment="Top" Width="96" Click="btnExit_Click"/>
 
     </Grid>

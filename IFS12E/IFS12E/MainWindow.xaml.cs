@@ -56,6 +56,7 @@ namespace IFS12E
                 if(b_PushResult)
                 {
                     MessageBox.Show("Wert wurde gespeichert!", "Info - Push", MessageBoxButton.OK, MessageBoxImage.Information);
+                    txtStackInput.Text = "";
                 }
                 else
                 {
@@ -65,8 +66,24 @@ namespace IFS12E
             else
             {
                 MessageBox.Show("Fehler im Input-Feld", "Error - Input", MessageBoxButton.OK, MessageBoxImage.Error);
+                txtStackInput.Focus();
             }
             
+        }
+
+        private void btnPop_Click(object sender, RoutedEventArgs e)
+        {
+            int i_ergebnis;
+            if(!cs_s1.isEmpty())
+            {
+                i_ergebnis = cs_s1.Pop();
+
+                MessageBox.Show("'" + i_ergebnis.ToString() + "' wurde vom Stack geholt!", "Info - Pop", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Der Stack enthält keine Werte!", "Error - Pop", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
