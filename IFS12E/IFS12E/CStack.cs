@@ -59,7 +59,7 @@ namespace IFS12E
         {
             bool b_saved = false;
 
-            if ((getAktIndex()+1) < getSize())
+            if ((getAktIndex()+1) <= getSize())
             {
                 this.ia_Stack[getAktIndex()] = i_zahl;
                 b_saved = true;
