@@ -18,7 +18,7 @@ namespace IFS12E
         public CStack(int i_newSize)
         {
             setSize(i_newSize);
-            ia_Stack = new int[i_newSize];
+            this.ia_Stack = new int[getSize()];
         }
 
         public void setSize(int i_newSize)
@@ -79,7 +79,6 @@ namespace IFS12E
 
         public int Pop()
         {
-            //int i_ergebnis;
             if(!isEmpty())
             {
                 LowerIndexByOne();
