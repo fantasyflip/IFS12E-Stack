@@ -27,6 +27,8 @@ namespace IFS12E
         {
             InitializeComponent();
             cs_s1 = new CStack(ci_anzahl);
+            cs_s1.setAnzeige(lstStack);
+            lblStackSize.Content = "Stack-Größe: " + ci_anzahl;
         }
 
         private void btnExit_Click(object sender, RoutedEventArgs e)
